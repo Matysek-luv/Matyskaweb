@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --font-text: 'Lato', sans-serif;
+  --font-nadpis: 'Cormorant Garamond', serif;
+
+  --tmavy: #152238;
+  --zlata: #b8960c;
+  --zlata-svetla: #d4af37;
+  --accent: #2a7a8c;
+  --text: #222;
+  --text-sedy: #555;
+  --text-svetly: #888;
+  --pozadi: #f6f4ef;
+  --border: #ddd8cf;
+  --bila: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  color: var(--text);
+  background: var(--bila);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+.logo-pismena,
+.jmeno,
+.nazev-sluzby,
+.pata-logo,
+.nadpis-sluzeb {
+  font-family: var(--font-nadpis);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--tmavy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 4rem;
+  min-height: 70px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-pismena {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--bila);
+  letter-spacing: 3px;
+}
+
+.logo-pismena span {
+  color: var(--zlata);
+}
+
+.logo-popis {
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #667;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+.odkazy {
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.odkazy a {
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #89a;
+  padding: 0.5rem 1.2rem;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.odkazy a:hover {
+  color: var(--bila);
+}
+
+.odkazy a.aktivni {
+  color: var(--bila);
+}
+
+main {
+  padding-top: 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tlacitka {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.button-zlaty,
+.button-ramecek {
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.button-zlaty {
+  background: var(--tmavy);
+  color: var(--bila);
+}
+
+.button-zlaty:hover {
+  background: #1d3050;
+}
+
+.button-ramecek {
+  background: transparent;
+  color: var(--text-sedy);
+  border: 1px solid var(--border);
+}
+
+.button-ramecek:hover {
+  border-color: var(--tmavy);
+  color: var(--tmavy);
+}
+
+.uvod {
+  background: var(--pozadi);
+  padding: 7rem 4rem 6rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.maly-popis {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.uvod h1 {
+  font-size: 4.2rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  line-height: 1.12;
+  margin-bottom: 1.5rem;
+  max-width: 520px;
+}
+
+.uvod > p {
+  font-size: 1rem;
+  color: var(--text-sedy);
+  max-width: 480px;
+  line-height: 1.85;
+  margin-bottom: 2.5rem;
+}
+
+.statistiky {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--tmavy);
+}
+
+.stat {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat-cislo {
+  font-family: var(--font-nadpis);
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--zlata);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-popis {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.proc-nas {
+  padding: 5rem 4rem;
+  background: var(--bila);
+}
+
+.proc-nas-nadpis {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.proc-nas-nadpis h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--tmavy);
+}
+
+.proc-nas-podnadpis {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-sedy);
+  max-width: 540px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.vyhody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.vyhoda {
+  padding: 2rem 1.8rem;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.vyhoda:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-color: var(--zlata);
+}
+
+.vyhoda-ikona {
+  width: 44px;
+  height: 44px;
+  background: var(--pozadi);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.vyhoda h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 0.6rem;
+}
+
+.vyhoda p {
+  font-size: 0.88rem;
+  color: var(--text-sedy);
+  line-height: 1.75;
+}
+
+.cta-banner {
+  background: var(--tmavy);
+  padding: 3.5rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cta-text h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--bila);
+  margin-bottom: 0.4rem;
+}
+
+.cta-text p {
+  font-size: 0.92rem;
+  color: #89a;
+  line-height: 1.7;
+}
+
+.cta-banner .button-zlaty {
+  flex-shrink: 0;
+  background: var(--zlata);
+  color: var(--tmavy);
+}
+
+.cta-banner .button-zlaty:hover {
+  background: var(--zlata-svetla);
+}
+
+.sekce-onas {
+  background: var(--pozadi);
+  padding: 5rem 4rem;
+  flex: 1;
+}
+
+.sekce-onas h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 0.4rem;
+}
+
+.podtitulek {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.uvod-text {
+  font-size: 0.95rem;
+  color: var(--text-sedy);
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.sloupce {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.levy-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 1rem;
+}
+
+.levy-text p {
+  font-size: 0.92rem;
+  color: var(--text-sedy);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+.hodnoty {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.polozka {
+  padding: 1.2rem 1.5rem;
+  border-left: 3px solid var(--zlata);
+}
+
+.polozka h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--tmavy);
+  margin-bottom: 0.4rem;
+}
+
+.polozka p {
+  font-size: 0.88rem;
+  color: var(--text-sedy);
+  line-height: 1.7;
+}
+
+.sekce-tym {
+  background: var(--pozadi);
+  padding: 5rem 4rem;
+  flex: 1;
+}
+
+.sekce-sluzby {
+  background: var(--pozadi);
+  padding: 5rem 4rem;
+  flex: 1;
+}
+
+.sluzby-uvod {
+  max-width: 640px;
+  margin-bottom: 4rem;
+}
+
+.sluzby-uvod h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 0.8rem;
+}
+
+.sluzby-seznam {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border);
+  margin-bottom: 5rem;
+}
+
+.sluzba-velka {
+  display: grid;
+  grid-template-columns: 80px auto;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.sluzba-velka:hover {
+  background: rgba(184, 150, 12, 0.04);
+}
+
+.sluzba-cislo {
+  font-family: var(--font-nadpis);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--zlata);
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.sluzba-obsah h3 {
+  font-family: var(--font-nadpis);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 0.8rem;
+}
+
+.sluzba-obsah p {
+  font-size: 0.92rem;
+  color: var(--text-sedy);
+  line-height: 1.85;
+  max-width: 680px;
+}
+
+.sluzba-pravnik {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-svetly);
+}
+
+.sluzba-pravnik a {
+  color: var(--zlata);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sluzba-pravnik a:hover {
+  color: var(--tmavy);
+}
+
+.sluzby-cta {
+  background: var(--tmavy);
+  padding: 3rem 3.5rem;
+  max-width: 640px;
+}
+
+.sluzby-cta h3 {
+  font-family: var(--font-nadpis);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--bila);
+  margin-bottom: 0.8rem;
+}
+
+.sluzby-cta p {
+  font-size: 0.92rem;
+  color: #89a;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.sekce-tym h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 0.4rem;
+}
+
+.lidi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.lidi a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.lidi a .karta {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lidi a:hover .karta {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.karta {
+  background: var(--bila);
+  overflow: hidden;
+}
+
+.karta img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.detail {
+  padding: 1.5rem;
+}
+
+.jmeno {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 0.3rem;
+}
+
+.pozice {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.detail p {
+  font-size: 0.87rem;
+  color: var(--text-sedy);
+  line-height: 1.7;
+}
+
+.nadpis-sluzeb {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 2rem;
+}
+
+.sluzby {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.sluzba {
+  background: var(--bila);
+  padding: 2rem;
+  transition: background 0.15s;
+}
+
+.sluzba:hover {
+  background: var(--pozadi);
+}
+
+.nazev-sluzby {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 0.5rem;
+}
+
+.sluzba p {
+  font-size: 0.87rem;
+  color: var(--text-sedy);
+  line-height: 1.75;
+}
+
+footer {
+  background: var(--tmavy);
+  padding: 2.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.pata-logo {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--bila);
+  text-decoration: none;
+}
+
+.pata-logo span {
+  color: var(--zlata);
+}
+
+.pata-odkazy {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pata-odkazy a {
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #556;
+  white-space: nowrap;
+}
+
+.pata-odkazy a:hover,
+.pata-odkazy a.aktivni {
+  color: var(--bila);
+}
+
+.pata-text {
+  font-size: 0.7rem;
+  color: #445;
+}
+
+.sekce-profil {
+  background: var(--pozadi);
+  padding: 5rem 4rem;
+  flex: 1;
+}
+
+.zpet {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-svetly);
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+}
+
+.zpet:hover {
+  color: var(--tmavy);
+}
+
+.profil-obsah {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.foto img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.sekce-profil h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.kolonky {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+.kolonka {
+  background: var(--bila);
+  padding: 1.2rem 1.5rem;
+}
+
+.kolonka-nazev {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.kolonka-hodnota {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.o-pravnikovi h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--tmavy);
+  margin-bottom: 1rem;
+}
+
+.o-pravnikovi p {
+  font-size: 0.92rem;
+  color: var(--text-sedy);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .statistiky {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vyhody {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .odkazy {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding-top: 110px;
+  }
+
+  .uvod {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .uvod h1 {
+    font-size: 2.6rem;
+  }
+
+  .sloupce {
+    grid-template-columns: 100%;
+  }
+
+  .lidi,
+  .sluzby {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profil-obsah {
+    grid-template-columns: 100%;
+    gap: 2rem;
+  }
+
+  .foto img {
+    max-width: 320px;
+  }
+
+  .sekce-profil h1 {
+    font-size: 2.2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .statistiky {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vyhody {
+    grid-template-columns: 1fr;
+  }
+
+  .proc-nas {
+    padding: 3rem 1.5rem;
+  }
+
+  .cta-banner {
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .uvod,
+  .sekce-onas,
+  .sekce-tym,
+  .sekce-sluzby,
+  .sekce-profil {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .tlacitka {
+    flex-direction: column;
+  }
+
+  .lidi,
+  .sluzby {
+    grid-template-columns: 100%;
+  }
+
+  .kolonky {
+    grid-template-columns: 100%;
+  }
+
+  .sekce-profil h1 {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .statistiky {
+    grid-template-columns: 1fr;
+  }
+
+  .uvod h1 {
+    font-size: 2.2rem;
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+  }
+}
